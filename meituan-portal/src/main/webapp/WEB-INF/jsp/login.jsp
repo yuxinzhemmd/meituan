@@ -8,6 +8,7 @@
 		<title>登录&nbsp;丨肥肥外卖</title>
 		<link rel="stylesheet" type="text/css" href="/css/login.css"/>
 		<script src="/js/login.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/jquery-1.6.4.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
  			<!--登录页面logo-->
@@ -27,7 +28,7 @@
 					<input type="password" name="password" id="password" placeholder="密码"/>
 					<p ><a href="#" class="forget">忘记密码</a></p>
 					<input type="submit" value="登录" id="btn" />
-					<p class="no">还没有账号？ <a href="#">免费注册</a></p>
+					<p class="no">还没有账号？ <a href="register.html">免费注册</a></p>
 				</div>
 			</div>
 </body>

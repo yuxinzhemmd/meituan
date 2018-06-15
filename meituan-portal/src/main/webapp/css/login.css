@@ -15,8 +15,7 @@
 			body {
 
 				background-color: #fff;
-				background: url(../images/rb.png) 700px 150px no-repeat;
-				background-size:580px ;
+				
 
 			}
 			/*登录logo样式*/
@@ -33,7 +32,8 @@
 			/*主体部分样式*/
 			.main {
 				height: 383px;
-
+				background: url(../images/rb.png) 520px 26% no-repeat;
+				background-size:580px;
 			}
 			.login {
 				margin-top: 40px;

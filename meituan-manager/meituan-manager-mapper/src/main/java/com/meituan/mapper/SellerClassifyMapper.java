@@ -10,7 +10,7 @@ public interface SellerClassifyMapper {
 
     int deleteByExample(SellerClassifyExample example);
 
-    int deleteByPrimaryKey(Integer cid);
+    int deleteByPrimaryKey(Long cid);
 
     int insert(SellerClassify record);
 
@@ -18,7 +18,7 @@ public interface SellerClassifyMapper {
 
     List<SellerClassify> selectByExample(SellerClassifyExample example);
 
-    SellerClassify selectByPrimaryKey(Integer cid);
+    SellerClassify selectByPrimaryKey(Long cid);
 
     int updateByExampleSelective(@Param("record") SellerClassify record, @Param("example") SellerClassifyExample example);
 

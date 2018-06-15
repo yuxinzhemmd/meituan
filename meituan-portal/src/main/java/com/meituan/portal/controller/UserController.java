@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.meituan.common.Utils.MeituanResult;
@@ -36,16 +37,17 @@ public class UserController {
 	//用户名检测
 	@RequestMapping("/user/checkname")
 	@ResponseBody
-	public MeituanResult checkDate(String content) {
-		MeituanResult result = userservice.checkDate(content);
+	public MeituanResult checkDate(@RequestParam String username) {
+		MeituanResult result = userservice.checkDate(username);
 		return result;
 	}
 	
 	//手机检测
 	@RequestMapping("/user/checkphone")
 	@ResponseBody
-	public MeituanResult checkDate1(String content) {
-		MeituanResult result = userservice.checkDate1(content);
+	public MeituanResult checkDate1(@RequestParam("phone") String phone) {
+		System.out.println(phone);
+		MeituanResult result = userservice.checkDate1(phone);
 		return result;
 	}
 	

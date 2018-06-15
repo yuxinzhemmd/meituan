@@ -38,7 +38,7 @@ function add(type1) {
 					while (i < obj1.data.length) {
 						tet += "<li>";
 						tet += "<div class='dian'>";
-						tet += "<a href='#'>";
+						tet += "<a href='restaurant.html?sid="+obj1.data[i].sid+"'>";
 						tet += "<img src='/images/" + obj1.data[i].src + "'"
 								+ " width='208px' height='156px'/>";
 						tet += "<div class='dianming'>" + obj1.data[i].sname
@@ -58,7 +58,7 @@ function add(type1) {
 					while (i < 8 * count) {
 						tet += "<li>";
 						tet += "<div class='dian'>";
-						tet += "<a href='#'>";
+						tet += "<a href='restaurant.html?sid="+obj1.data[i].sid+"'>";
 						tet += "<img src='/images/" + obj1.data[i].src + "'"
 								+ " width='208px' height='156px'/>";
 						tet += "<div class='dianming'>" + obj1.data[i].sname
@@ -121,7 +121,7 @@ function shuchu(result) {
 			while (i < obj1.data.length) {
 				tet += "<li>";
 				tet += "<div class='dian'>";
-				tet += "<a href='#'>";
+				tet += "<a href='restaurant.html?sid="+obj1.data[i].sid+"'>";
 				tet += "<img src='/images/" + obj1.data[i].src
 						+ "' width='208px' height='156px'/>";
 				tet += "<div class='dianming'>" + obj1.data[i].sname + "</div>";
@@ -138,7 +138,7 @@ function shuchu(result) {
 			while (i < 8) {
 				tet += "<li>";
 				tet += "<div class='dian'>";
-				tet += "<a href='#'>";
+				tet += "<a href='restaurant.html?sid="+obj1.data[i].sid+"'>";
 				tet += "<img src='/images/" + obj1.data[i].src
 						+ "' width='208px' height='156px'/>";
 				tet += "<div class='dianming'>" + obj1.data[i].sname + "</div>";

@@ -52,5 +52,13 @@ public class SellerServiceImpl implements ISellerService {
 		return MeituanResult.ok(list);
 		}
 	}
+	@Override
+	public MeituanResult FindSeller(long sid) {
+		SellerExample example = new SellerExample();
+		Criteria criteria = example.createCriteria();
+		criteria.andSidEqualTo(sid);
+		Seller seller = sellerMapper.selectByPrimaryKey(sid);
+		return MeituanResult.ok(seller);
+	}
 
 }

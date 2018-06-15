@@ -1,4 +1,19 @@
+function getUrlParameter(paramKey) {
+        var sURLVariables, j,i, sParameterName, sPageURL = window.location.search.substring(1);
+        if (sPageURL.length>0) {
+            sURLVariables = sPageURL.split("&");
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split("=");
+                if (sParameterName[0] === paramKey) {
+                	j = sParameterName[1]+"="+sParameterName[2];
+                	return j;
+                }
+            }
+        }else return "";
+    }
+
 window.onload=function(){
+	        var redirectUrl  = getUrlParameter('redirect');
 			var btn=document.getElementById("btn");
 			var username;
 			var pw;
@@ -35,7 +50,12 @@ window.onload=function(){
 									info.style.visibility="visible";
 									info.innerHTML=obj.msg;
 								}else {
-									location.href='index.html';
+									if (redirectUrl == "") {
+										location.href='index.html';
+									} else {
+										location.href = redirectUrl;
+									}
+									
 								}
 	}
 						}

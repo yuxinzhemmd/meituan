@@ -6,7 +6,7 @@
     <result column="sname" property="sname" jdbcType="VARCHAR" />
     <result column="address" property="address" jdbcType="VARCHAR" />
     <result column="pnumber" property="pnumber" jdbcType="VARCHAR" />
-    <result column="business_time" property="businessTime" jdbcType="TIME" />
+    <result column="business_time" property="businessTime" jdbcType="VARCHAR" />
     <result column="src" property="src" jdbcType="VARCHAR" />
     <result column="type" property="type" jdbcType="VARCHAR" />
     <result column="created" property="created" jdbcType="TIMESTAMP" />
@@ -109,7 +109,7 @@
       type, created, updated
       )
     values (#{sid,jdbcType=BIGINT}, #{sname,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
-      #{pnumber,jdbcType=VARCHAR}, #{businessTime,jdbcType=TIME}, #{src,jdbcType=VARCHAR}, 
+      #{pnumber,jdbcType=VARCHAR}, #{businessTime,jdbcType=VARCHAR}, #{src,jdbcType=VARCHAR}, 
       #{type,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP}
       )
   </insert>
@@ -158,7 +158,7 @@
         #{pnumber,jdbcType=VARCHAR},
       </if>
       <if test="businessTime != null" >
-        #{businessTime,jdbcType=TIME},
+        #{businessTime,jdbcType=VARCHAR},
       </if>
       <if test="src != null" >
         #{src,jdbcType=VARCHAR},
@@ -196,7 +196,7 @@
         pnumber = #{record.pnumber,jdbcType=VARCHAR},
       </if>
       <if test="record.businessTime != null" >
-        business_time = #{record.businessTime,jdbcType=TIME},
+        business_time = #{record.businessTime,jdbcType=VARCHAR},
       </if>
       <if test="record.src != null" >
         src = #{record.src,jdbcType=VARCHAR},
@@ -221,7 +221,7 @@
       sname = #{record.sname,jdbcType=VARCHAR},
       address = #{record.address,jdbcType=VARCHAR},
       pnumber = #{record.pnumber,jdbcType=VARCHAR},
-      business_time = #{record.businessTime,jdbcType=TIME},
+      business_time = #{record.businessTime,jdbcType=VARCHAR},
       src = #{record.src,jdbcType=VARCHAR},
       type = #{record.type,jdbcType=VARCHAR},
       created = #{record.created,jdbcType=TIMESTAMP},
@@ -243,7 +243,7 @@
         pnumber = #{pnumber,jdbcType=VARCHAR},
       </if>
       <if test="businessTime != null" >
-        business_time = #{businessTime,jdbcType=TIME},
+        business_time = #{businessTime,jdbcType=VARCHAR},
       </if>
       <if test="src != null" >
         src = #{src,jdbcType=VARCHAR},
@@ -265,7 +265,7 @@
     set sname = #{sname,jdbcType=VARCHAR},
       address = #{address,jdbcType=VARCHAR},
       pnumber = #{pnumber,jdbcType=VARCHAR},
-      business_time = #{businessTime,jdbcType=TIME},
+      business_time = #{businessTime,jdbcType=VARCHAR},
       src = #{src,jdbcType=VARCHAR},
       type = #{type,jdbcType=VARCHAR},
       created = #{created,jdbcType=TIMESTAMP},

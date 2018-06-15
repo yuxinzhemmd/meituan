@@ -11,7 +11,7 @@ public class SellerMenu {
 
     private String src;
 
-    private String type;
+    private Long cid;
 
     public Long getId() {
         return id;
@@ -53,11 +53,11 @@ public class SellerMenu {
         this.src = src == null ? null : src.trim();
     }
 
-    public String getType() {
-        return type;
+    public Long getCid() {
+        return cid;
     }
 
-    public void setType(String type) {
-        this.type = type == null ? null : type.trim();
+    public void setCid(Long cid) {
+        this.cid = cid;
     }
 }

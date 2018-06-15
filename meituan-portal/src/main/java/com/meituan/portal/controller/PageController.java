@@ -22,4 +22,12 @@ public class PageController {
 	public String showPicture() {
 		return "picture";
 	}
+	@RequestMapping("/restaurant")
+	public String showRestaurant() {
+		return "restaurant";
+	}
+	@RequestMapping("/orderc")
+	public String showOrder() {
+		return "orderc";
+	}
 }

@@ -1,6 +1,5 @@
 package com.meituan.portal.controller;
 
-import javax.swing.Spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,6 +27,13 @@ public class SellerController {
 	@ResponseBody
 	public MeituanResult ShowSeller() {
 		MeituanResult result = sellerService.ShowSeller();
+		return result;
+	}
+	
+	@RequestMapping("/seller/find/{sid}")
+	@ResponseBody
+	public MeituanResult findSeller(@PathVariable long sid) {
+		MeituanResult result = sellerService.FindSeller(sid);
 		return result;
 	}
 	

@@ -24,22 +24,23 @@ public class MenuServiceImpl implements IMenuService {
 	private SellerClassifyMapper classifyMapper;
 	
 	@Override
-	public MeituanResult getMenu(long id) {
+	public MeituanResult getMenu(long sid,long cid) {
 		SellerMenuExample example = new SellerMenuExample();
 		Criteria criteria = example.createCriteria();
-		criteria.andSidEqualTo(id);
+		criteria.andSidEqualTo(sid);
+		criteria.andCidEqualTo(cid);
 		List<SellerMenu> list = menuMapper.selectByExample(example);
-		MeituanResult result = new MeituanResult(list);
+		MeituanResult result = MeituanResult.ok(list);
 		return result;
 	}
 	
 	@Override
-	public MeituanResult getMenuType(long id) {
+	public MeituanResult getMenuType(long sid) {
 		SellerClassifyExample example = new SellerClassifyExample();
 		com.meituan.pojo.SellerClassifyExample.Criteria criteria = example.createCriteria();
-		criteria.andSidEqualTo(id);
+		criteria.andSidEqualTo(sid);
 		List<SellerClassify> list = classifyMapper.selectByExample(example);
-		MeituanResult result = new MeituanResult(list);
+		MeituanResult result = MeituanResult.ok(list);
 		return result;
 	}
 

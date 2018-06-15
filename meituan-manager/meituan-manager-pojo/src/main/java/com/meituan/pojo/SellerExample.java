@@ -2,7 +2,6 @@ package com.meituan.pojo;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 public class SellerExample {
@@ -104,32 +103,6 @@ public class SellerExample {
                 throw new RuntimeException("Between values for " + property + " cannot be null");
             }
             criteria.add(new Criterion(condition, value1, value2));
-        }
-
-        protected void addCriterionForJDBCTime(String condition, Date value, String property) {
-            if (value == null) {
-                throw new RuntimeException("Value for " + property + " cannot be null");
-            }
-            addCriterion(condition, new java.sql.Time(value.getTime()), property);
-        }
-
-        protected void addCriterionForJDBCTime(String condition, List<Date> values, String property) {
-            if (values == null || values.size() == 0) {
-                throw new RuntimeException("Value list for " + property + " cannot be null or empty");
-            }
-            List<java.sql.Time> timeList = new ArrayList<java.sql.Time>();
-            Iterator<Date> iter = values.iterator();
-            while (iter.hasNext()) {
-                timeList.add(new java.sql.Time(iter.next().getTime()));
-            }
-            addCriterion(condition, timeList, property);
-        }
-
-        protected void addCriterionForJDBCTime(String condition, Date value1, Date value2, String property) {
-            if (value1 == null || value2 == null) {
-                throw new RuntimeException("Between values for " + property + " cannot be null");
-            }
-            addCriterion(condition, new java.sql.Time(value1.getTime()), new java.sql.Time(value2.getTime()), property);
         }
 
         public Criteria andSidIsNull() {
@@ -412,53 +385,63 @@ public class SellerExample {
             return (Criteria) this;
         }
 
-        public Criteria andBusinessTimeEqualTo(Date value) {
-            addCriterionForJDBCTime("business_time =", value, "businessTime");
+        public Criteria andBusinessTimeEqualTo(String value) {
+            addCriterion("business_time =", value, "businessTime");
             return (Criteria) this;
         }
 
-        public Criteria andBusinessTimeNotEqualTo(Date value) {
-            addCriterionForJDBCTime("business_time <>", value, "businessTime");
+        public Criteria andBusinessTimeNotEqualTo(String value) {
+            addCriterion("business_time <>", value, "businessTime");
             return (Criteria) this;
         }
 
-        public Criteria andBusinessTimeGreaterThan(Date value) {
-            addCriterionForJDBCTime("business_time >", value, "businessTime");
+        public Criteria andBusinessTimeGreaterThan(String value) {
+            addCriterion("business_time >", value, "businessTime");
             return (Criteria) this;
         }
 
-        public Criteria andBusinessTimeGreaterThanOrEqualTo(Date value) {
-            addCriterionForJDBCTime("business_time >=", value, "businessTime");
+        public Criteria andBusinessTimeGreaterThanOrEqualTo(String value) {
+            addCriterion("business_time >=", value, "businessTime");
             return (Criteria) this;
         }
 
-        public Criteria andBusinessTimeLessThan(Date value) {
-            addCriterionForJDBCTime("business_time <", value, "businessTime");
+        public Criteria andBusinessTimeLessThan(String value) {
+            addCriterion("business_time <", value, "businessTime");
             return (Criteria) this;
         }
 
-        public Criteria andBusinessTimeLessThanOrEqualTo(Date value) {
-            addCriterionForJDBCTime("business_time <=", value, "businessTime");
+        public Criteria andBusinessTimeLessThanOrEqualTo(String value) {
+            addCriterion("business_time <=", value, "businessTime");
             return (Criteria) this;
         }
 
-        public Criteria andBusinessTimeIn(List<Date> values) {
-            addCriterionForJDBCTime("business_time in", values, "businessTime");
+        public Criteria andBusinessTimeLike(String value) {
+            addCriterion("business_time like", value, "businessTime");
             return (Criteria) this;
         }
 
-        public Criteria andBusinessTimeNotIn(List<Date> values) {
-            addCriterionForJDBCTime("business_time not in", values, "businessTime");
+        public Criteria andBusinessTimeNotLike(String value) {
+            addCriterion("business_time not like", value, "businessTime");
             return (Criteria) this;
         }
 
-        public Criteria andBusinessTimeBetween(Date value1, Date value2) {
-            addCriterionForJDBCTime("business_time between", value1, value2, "businessTime");
+        public Criteria andBusinessTimeIn(List<String> values) {
+            addCriterion("business_time in", values, "businessTime");
             return (Criteria) this;
         }
 
-        public Criteria andBusinessTimeNotBetween(Date value1, Date value2) {
-            addCriterionForJDBCTime("business_time not between", value1, value2, "businessTime");
+        public Criteria andBusinessTimeNotIn(List<String> values) {
+            addCriterion("business_time not in", values, "businessTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andBusinessTimeBetween(String value1, String value2) {
+            addCriterion("business_time between", value1, value2, "businessTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andBusinessTimeNotBetween(String value1, String value2) {
+            addCriterion("business_time not between", value1, value2, "businessTime");
             return (Criteria) this;
         }
 

@@ -11,7 +11,7 @@ public class Seller {
 
     private String pnumber;
 
-    private Date businessTime;
+    private String businessTime;
 
     private String src;
 
@@ -53,12 +53,12 @@ public class Seller {
         this.pnumber = pnumber == null ? null : pnumber.trim();
     }
 
-    public Date getBusinessTime() {
+    public String getBusinessTime() {
         return businessTime;
     }
 
-    public void setBusinessTime(Date businessTime) {
-        this.businessTime = businessTime;
+    public void setBusinessTime(String businessTime) {
+        this.businessTime = businessTime == null ? null : businessTime.trim();
     }
 
     public String getSrc() {

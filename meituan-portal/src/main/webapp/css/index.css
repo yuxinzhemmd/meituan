@@ -33,8 +33,11 @@
 				font-size: 14px;
 				position: relative;
 				cursor: pointer;
-				visibility: none;
+				visibility: hidden;
 			}
+		#name #down {
+			visibility: hidden;
+		}
 			#name:hover #xialikuang{
 				
 				visibility: visible;

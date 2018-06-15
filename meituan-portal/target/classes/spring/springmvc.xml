@@ -24,10 +24,10 @@
 	</bean>
 	
 	<!-- 拦截器配置 -->
-	<mvc:interceptors>
+ 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/order/**"/>
+			<mvc:mapping path="/orderc/**"/>
 			<bean class="com.meituan.portal.interceptor.LoginInterceptor"/>
 		</mvc:interceptor>
-	</mvc:interceptors>
+	</mvc:interceptors> 
 </beans>

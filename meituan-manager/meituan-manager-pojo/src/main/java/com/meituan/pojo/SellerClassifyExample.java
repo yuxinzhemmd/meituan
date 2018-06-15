@@ -114,52 +114,52 @@ public class SellerClassifyExample {
             return (Criteria) this;
         }
 
-        public Criteria andCidEqualTo(Integer value) {
+        public Criteria andCidEqualTo(Long value) {
             addCriterion("cid =", value, "cid");
             return (Criteria) this;
         }
 
-        public Criteria andCidNotEqualTo(Integer value) {
+        public Criteria andCidNotEqualTo(Long value) {
             addCriterion("cid <>", value, "cid");
             return (Criteria) this;
         }
 
-        public Criteria andCidGreaterThan(Integer value) {
+        public Criteria andCidGreaterThan(Long value) {
             addCriterion("cid >", value, "cid");
             return (Criteria) this;
         }
 
-        public Criteria andCidGreaterThanOrEqualTo(Integer value) {
+        public Criteria andCidGreaterThanOrEqualTo(Long value) {
             addCriterion("cid >=", value, "cid");
             return (Criteria) this;
         }
 
-        public Criteria andCidLessThan(Integer value) {
+        public Criteria andCidLessThan(Long value) {
             addCriterion("cid <", value, "cid");
             return (Criteria) this;
         }
 
-        public Criteria andCidLessThanOrEqualTo(Integer value) {
+        public Criteria andCidLessThanOrEqualTo(Long value) {
             addCriterion("cid <=", value, "cid");
             return (Criteria) this;
         }
 
-        public Criteria andCidIn(List<Integer> values) {
+        public Criteria andCidIn(List<Long> values) {
             addCriterion("cid in", values, "cid");
             return (Criteria) this;
         }
 
-        public Criteria andCidNotIn(List<Integer> values) {
+        public Criteria andCidNotIn(List<Long> values) {
             addCriterion("cid not in", values, "cid");
             return (Criteria) this;
         }
 
-        public Criteria andCidBetween(Integer value1, Integer value2) {
+        public Criteria andCidBetween(Long value1, Long value2) {
             addCriterion("cid between", value1, value2, "cid");
             return (Criteria) this;
         }
 
-        public Criteria andCidNotBetween(Integer value1, Integer value2) {
+        public Criteria andCidNotBetween(Long value1, Long value2) {
             addCriterion("cid not between", value1, value2, "cid");
             return (Criteria) this;
         }

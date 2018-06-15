@@ -1,9 +1,6 @@
 package com.meituan.portal.service.Impl;
 
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.meituan.common.Utils.IDUtils;
-import com.meituan.common.Utils.JsonUtils;
 import com.meituan.common.Utils.PictureResult;
 import com.meituan.portal.service.IPictureService;
 

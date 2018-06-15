@@ -33,14 +33,14 @@ public class LoginInterceptor implements HandlerInterceptor {
 		// 取不到用户信息
 		if (null == user) {
 			// 跳转到登录页面，把用户请求的url作为参数传递给登录页面。
-			response.sendRedirect("登录页面路径" + "?redirect="
-					+ request.getRequestURL());
+			response.sendRedirect("http://localhost:8081/login.html" + "?redirect="
+					+ request.getRequestURL()+ "?" + request.getQueryString());
 			// 返回false
 			return false;
 		}
 		// 取到用户信息，放行
 		// 把用户信息放入Request
-		request.setAttribute("user", user);
+		request.setAttribute("user", user.getId());
 		// 返回值决定handler是否执行。true：执行，false：不执行。
 		return true;
 	}

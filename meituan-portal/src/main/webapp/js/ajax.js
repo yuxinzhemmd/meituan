@@ -19,3 +19,6 @@ function ajax(url,callback){
  }
 			}
 }
+
+
+

@@ -32,9 +32,9 @@
 						</ul>
 					</div>
 					</span>
-					<a href="#" class="register" id="register">注册</a>
+					<a href="register.html" class="register" id="register">注册</a>
 					<i id="fenge">丨</i>
-					<a href="#" class="login" id="login">登录</a>
+					<a href="login.html" class="login" id="login">登录</a>
 					<a href="#" class="mobileVer">&nbsp;手机版</a>
 					<a href="#" class="meituanwang">&nbsp;美团网</a>
 					<a href="#" class="contact">&nbsp;联系我们</a>
@@ -154,6 +154,8 @@
 							var register=document.getElementById("register");
 							var fenge=document.getElementById("fenge");
 							var login=document.getElementById("login");
+							var down=document.getElementById("down");
+							down.style.visibility="visible";
 							name.style.visibility="visible";
 							register.style.visibility="hidden";
 							fenge.style.visibility="hidden";
@@ -173,6 +175,8 @@
 							var register=document.getElementById("register");
 							var fenge=document.getElementById("fenge");
 							var login=document.getElementById("login");
+							var down=document.getElementById("down");
+							down.style.visibility="hidden";
 							name.style.visibility="hidden";
 							register.style.visibility="visible";
 							fenge.style.visibility="visible";

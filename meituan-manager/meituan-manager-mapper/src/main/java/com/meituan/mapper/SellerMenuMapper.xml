@@ -7,7 +7,7 @@
     <result column="mname" property="mname" jdbcType="VARCHAR" />
     <result column="price" property="price" jdbcType="REAL" />
     <result column="src" property="src" jdbcType="VARCHAR" />
-    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="cid" property="cid" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -68,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, sid, mname, price, src, type
+    id, sid, mname, price, src, cid
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.meituan.pojo.SellerMenuExample" >
     select
@@ -102,9 +102,9 @@
   </delete>
   <insert id="insert" parameterType="com.meituan.pojo.SellerMenu" >
     insert into seller_menu (id, sid, mname, 
-      price, src, type)
+      price, src, cid)
     values (#{id,jdbcType=BIGINT}, #{sid,jdbcType=BIGINT}, #{mname,jdbcType=VARCHAR}, 
-      #{price,jdbcType=REAL}, #{src,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR})
+      #{price,jdbcType=REAL}, #{src,jdbcType=VARCHAR}, #{cid,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.meituan.pojo.SellerMenu" >
     insert into seller_menu
@@ -124,8 +124,8 @@
       <if test="src != null" >
         src,
       </if>
-      <if test="type != null" >
-        type,
+      <if test="cid != null" >
+        cid,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -144,8 +144,8 @@
       <if test="src != null" >
         #{src,jdbcType=VARCHAR},
       </if>
-      <if test="type != null" >
-        #{type,jdbcType=VARCHAR},
+      <if test="cid != null" >
+        #{cid,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -173,8 +173,8 @@
       <if test="record.src != null" >
         src = #{record.src,jdbcType=VARCHAR},
       </if>
-      <if test="record.type != null" >
-        type = #{record.type,jdbcType=VARCHAR},
+      <if test="record.cid != null" >
+        cid = #{record.cid,jdbcType=BIGINT},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -188,7 +188,7 @@
       mname = #{record.mname,jdbcType=VARCHAR},
       price = #{record.price,jdbcType=REAL},
       src = #{record.src,jdbcType=VARCHAR},
-      type = #{record.type,jdbcType=VARCHAR}
+      cid = #{record.cid,jdbcType=BIGINT}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -208,8 +208,8 @@
       <if test="src != null" >
         src = #{src,jdbcType=VARCHAR},
       </if>
-      <if test="type != null" >
-        type = #{type,jdbcType=VARCHAR},
+      <if test="cid != null" >
+        cid = #{cid,jdbcType=BIGINT},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -220,7 +220,7 @@
       mname = #{mname,jdbcType=VARCHAR},
       price = #{price,jdbcType=REAL},
       src = #{src,jdbcType=VARCHAR},
-      type = #{type,jdbcType=VARCHAR}
+      cid = #{cid,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

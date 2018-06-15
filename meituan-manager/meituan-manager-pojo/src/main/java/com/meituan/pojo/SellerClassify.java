@@ -1,17 +1,17 @@
 package com.meituan.pojo;
 
 public class SellerClassify {
-    private Integer cid;
+    private Long cid;
 
     private String cname;
 
     private Long sid;
 
-    public Integer getCid() {
+    public Long getCid() {
         return cid;
     }
 
-    public void setCid(Integer cid) {
+    public void setCid(Long cid) {
         this.cid = cid;
     }
 
